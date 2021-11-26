@@ -1,0 +1,21 @@
+1. Install typescript
+    -npm i --save-dev typescript
+    -create tsconfig.json file with below details
+    {
+    "compilerOptions": {
+        "strict": true,
+        "esModuleInterop": true
+    },
+    "include": ["src/*"]
+}
+2. Install Babel
+    -npm i --save-dev @babel/node @babel/cli @babel/core @babel/preset-env @babel/preset-typescript
+    -crete .babelrc file with below details
+    {
+    "presets": ["@babel/preset-env","@babel/preset-typescript"]
+    }
+3. Scripts for package.json file
+    - "testTs":"tsc --noEmit",
+    "start":"babel-node src/index.ts --extensions \".ts\"",
+    "build":"npm run testTs && babel src -d dist --extensions \".ts\"",
+    "startJs":"node dist/index.js"

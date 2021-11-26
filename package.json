@@ -1,0 +1,30 @@
+{
+  "name": "nodejsboilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testTs":"tsc --noEmit",
+    "start":"babel-node src/index.ts --extensions \".ts\"",
+    "build":"npm run testTs && babel src -d dist --extensions \".ts\"",
+    "startJs":"node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekDhami/nodejsboilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekDhami/nodejsboilerplate/issues"
+  },
+  "homepage": "https://github.com/abhishekDhami/nodejsboilerplate#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "typescript": "^4.5.2"
+  }
+}
