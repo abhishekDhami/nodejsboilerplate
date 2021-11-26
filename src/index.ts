@@ -18,6 +18,8 @@ let pr3=new Promise((res,rej)=>{
     },100)
 })
 
+export {pr1,pr2,pr3}
+
 //It will give output once all are successful, throw error if anyone has failed before completing other tasks
 // let p=Promise.all([pr1,pr2,pr3]).then((d)=>{
 //     console.log(d)
